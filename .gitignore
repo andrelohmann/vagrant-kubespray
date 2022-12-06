@@ -1,0 +1,7 @@
+/provisioner/ansible_vagrant/roles/andrelohmann*
+/provisioner/.vagrant
+/.idea
+/nbproject
+.DS_Store
+*.retry
+*.log
