@@ -1,0 +1,28 @@
+---
+- name: "Preparing the vhost"
+  hosts: localhost
+  connection: local
+  become: true
+  become_method: sudo
+
+  vars:
+    required_packages:
+    - git
+    - tcptraceroute
+    - nmap
+    - net-tools
+    - htop
+    - jq
+    - python3-pip
+    #- python3-ruamel.yaml
+    - ca-certificates
+    - curl
+    - net-tools
+    required_python_packages: []
+    docker_users:
+    - vagrant
+
+  roles:
+  - andrelohmann.root_colored_prompt
+  - default_tasks
+...

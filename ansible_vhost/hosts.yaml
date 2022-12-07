@@ -1,0 +1,7 @@
+all:
+  hosts:
+    vhost:
+      ansible_host: 192.168.64.128
+      ip: 192.168.64.128
+      access_ip: 192.168.64.128
+      ansible_user: andre
