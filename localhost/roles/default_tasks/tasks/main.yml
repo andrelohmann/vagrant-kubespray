@@ -16,12 +16,4 @@
     extra_args: --upgrade
     executable: pip3
 
-- name: copy ssh_config /home/vagrant/.ssh/config
-  copy:
-    src: ssh_config
-    dest: /home/vagrant/.ssh/config
-    owner: vagrant
-    group: vagrant
-    mode: 0644
-
 ...

@@ -17,6 +17,7 @@ Server (Bare Metal) -> Vagrant K8s Cluster
 ### Prerequisites
 
   * Ubuntu Server minimized installed to the server
+  * User k8s is created and has sudo permissions without password
   * Add your public key for remote access
   * Install ansible
 
@@ -28,6 +29,7 @@ pip install --upgrade ansible-core~=2.11.0
 
 ### Installation
 
+  * login as k8s
   * Clone the repository
 
 ```
@@ -40,3 +42,4 @@ git clone https://github.com/andrelohmann/vagrant-kubespray.git
 cd vagrant-kubespace/localhost
 ansible-galaxy install -r requirements.yml
 ansible-playbook playbook.yml
+```

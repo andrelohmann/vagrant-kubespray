@@ -1,6 +1,0 @@
----
-configs:
-  memory: "2048"
-  cpus: "2"
-  priv_key: "id_rsa"
-...

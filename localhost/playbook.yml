@@ -20,9 +20,24 @@
     - net-tools
     required_python_packages: []
     docker_users:
-    - vagrant
+    - k8s
+    percona_mysql_version: '8' #'5.7'
+    percona_mysql_root_password: test
+    mysql_grants_databases:
+    - name: testdb
+      encoding: utf8
+    mysql_grants_users:
+    - name: testdbuser
+      password: test
+      host: localhost
+      priv: 'testdb.*:ALL'
+      state: present
 
   roles:
   - andrelohmann.root_colored_prompt
   - default_tasks
+  - andrelohmann.docker
+  - andrelohmann.percona_mysql
+  - andrelohmann.mysql_grants
+  # - mailhog
 ...
