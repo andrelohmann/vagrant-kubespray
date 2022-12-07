@@ -12,16 +12,31 @@
 
 Install Kubernetes on a bare metal machine.
 
-Workstation -> Vagrant Machine (provisioner) -> Server (Bare Metal) -> Vagrant K8s Cluster
+Server (Bare Metal) -> Vagrant K8s Cluster
 
 ### Prerequisites
 
-  * Vagrant + VirtualBox installed on the Workstation (ideally latest versions from official vagrant and virtualbox repos)
   * Ubuntu Server minimized installed to the server
+  * Add your public key for remote access
+  * Install ansible
+
+```
+apt update && apt install python3-pip git -yqq
+# Ansible Version 2.11 is important for kubespray
+pip install --upgrade ansible-core~=2.11.0
+```
 
 ### Installation
 
-  * Add your public key to the Server
-  * Set the sudoers file to not request a password
-  * Create a provisioner Vagrant Machine on your workbook (Linux Laptop, Mac, Whatever)
-  * ...
+  * Clone the repository
+
+```
+git clone https://github.com/andrelohmann/vagrant-kubespray.git
+```
+
+  * run the local deployment
+
+```
+cd vagrant-kubespace/localhost
+ansible-galaxy install -r requirements.yml
+ansible-playbook playbook.yml
