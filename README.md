@@ -6,7 +6,7 @@
   * Andre Lohmann
     <lohmann.andre (at) gmail (dot) com>
   * Westhand
-    <martin-alpers (at) web (dot) de>
+    <martinsmartformer (at) gmail (dot) com>
 
 ## Content
 
